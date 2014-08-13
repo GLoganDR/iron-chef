@@ -1,38 +1,57 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-*{
+body{
+  background-image: url('http://www.esigeneralconstruction.com/images/kitchen-renovation14.jpg');
+  background-size: cover;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  margin: 0px;
-  padding: 0px;
 }
 
-body{
-  background-color: #AAAAAA;
+label{
+  color: #D50500;
+  font-weight: bold;
 }
 
-header{
-  margin: 20px;
+h2{
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: left;
+  font-weight: bold;
 }
 
 header h1{
-  font-size: 25px;
+  font-size: 50px;
+  text-align: center;
+  color: #D50500;
+  text-decoration: underline;
 }
 
 .recipe{
   display: inline-block;
-  width: 250px;
+  position: relative;
+  top: 5px;
+  bottom: 5px;
+  vertical-align: top;
+  width: 400px;
   border: 1px solid #111111;
   border-radius: 5px;
   margin: 20px;
   background-color: #DDDDDD;
+  height: auto;
 }
 
 .recipe .photo{
+  position: relative;
   height: 300px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   border-bottom: 1px solid #111111;
   margin-bottom: 10px;
+}
+
+.recipe li{
+  margin: 3px 0;
+  position: relative;
 }
 
 .recipe .name{
@@ -41,11 +60,8 @@ header h1{
   padding: 5px;
 }
 
-.recipe .directions, .recipe .ingredients{
+.recipe li{
   padding: 5px;
-}
-
-.recipe .ingredients li{
   position: relative;
   left: 20px;
 }
@@ -57,17 +73,71 @@ header h1{
   margin-left: 20px;
 }
 
+.recipe .photo button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
 form{
   margin: 20px;
   padding: 10px;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #D50500;
 }
 
 form input, form button, form textarea{
   width: 350px;
   display: block;
-  
+}
+
+.recipe ol {
+  display: block;
+  list-style-type: decimal;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.recipe #ingredients {
+  width: 70%;
+}
+
+.recipe ul{
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+a:link, a:visited {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  background-color: #D50500;
+  padding: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a:hover, a:active {
+  background-color: #520008;
 }
 

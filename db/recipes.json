@@ -3,13 +3,17 @@
   "name":"BBQ Chicken",
   "photo":"http://www.foodlve.com/pictures/barbecue-chicken-recipe-14271427.jpg",
   "ingredients":["chicken", "barbecue sauce"],
-  "directions":"1. Prepare, 2. Cook, 3. Clean"
+  "directions":["Prepare", "Cook", "Clean"],
+  "category": "Dinner",
+  "date":{"$date":"2014-08-12T06:15:00.000-0500"}
 },
 {
   "_id":{"$oid":"000000000000000000000002"},
   "name":"Cake",
   "photo":"http://www.designsnext.com/wp-content/uploads/2014/01/Birthday-cake-designs-5.jpg",
-  "ingredients":["cake mix", "eggs", "water"], 
-  "directions":"1. Prepare, 2. Cook, 3. Clean"
+  "ingredients":["cake mix", "eggs", "water"],
+  "directions":["Prepare", "Cook", "Clean"],
+  "category": "Dessert",
+  "date":{"$date":"2011-08-12T05:15:00.000-0500"}
 }
 

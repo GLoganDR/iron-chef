@@ -1,17 +1,30 @@
 extends ../shared/template
 block content
- 
+
   #controls
    #visibility
-      button#hide Hide Form
-      button#show Show Form 
+      button.red#hide Hide Form
+      button.red#show Show Form
     form(method='post', action='/recipes')
+      select(name='category')
+        option Breakfast
+        option Lunch
+        option Dinner
+        option Dessert
+        option Party
       input(name='name', type='text', placeholder='Chicken', autofocus=true)
       input(name='photo', type='text', placeholder='Image URL')
       input(name='ingredients', type='text', placeholder='chicken, water, eggs')
       label Directions
       textarea(name='directions')
-      button Add Recipe
+      button.addButton#addButton Add Recipe
+  nav
+    ul#categories
+      li: a(href= '#') Breakfast
+      li: a(href= '#') Lunch
+      li: a(href= '#') Dinner
+      li: a(href= '#') Dessert
+      li: a(href= '#') Party
 
   #recipes
     each recipe in recipes

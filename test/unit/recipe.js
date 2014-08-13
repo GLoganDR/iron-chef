@@ -25,22 +25,24 @@ describe('Recipe', function(){
 
   describe('constructor', function(){
     it('should create a new Recipe object', function(){
-      var o = {name:'Carrots', photo:'carrots.jpg', ingredients:'carrots,water,pepper', directions:'1. Dice Carrots 2. Put in boiling water 3. Add pepper'},
+      var o = {name:'Carrots', photo:'carrots.jpg', category: 'Side Item', ingredients:'carrots,water,pepper', directions:'1. Dice Carrots, 2. Put in boiling water, 3. Add pepper'},
           r = new Recipe(o);
       expect(r).to.be.instanceof(Recipe);
       expect(r.name).to.equal('Carrots');
       expect(r.photo).to.equal('carrots.jpg');
+      expect(r.category).to.equal('Side Item');
     });
   });
 
   describe('.create', function(){
     it('should save a new Recipe', function(done){
-      Recipe.create({name:'Carrots', photo:'carrots.jpg', ingredients:'carrots,water,pepper', directions:'1. Dice Carrots 2. Put in boiling water 3. Add pepper'}, function(err, recipe){
+      Recipe.create({name:'Carrots', photo:'carrots.jpg', ingredients:'carrots,water,pepper', directions:'1. Dice Carrots, 2. Put in boiling water, 3. Add pepper'}, function(err, recipe){
         expect(recipe._id).to.be.instanceof(Mongo.ObjectID);
         expect(recipe).to.be.instanceof(Recipe);
         expect(recipe.name).to.equal('Carrots');
         expect(recipe.photo).to.equal('carrots.jpg');
         expect(recipe.ingredients).to.have.length(3);
+        expect(recipe.directions).to.have.length(3);
         done();
       });
     });
@@ -51,6 +53,18 @@ describe('Recipe', function(){
       Recipe.all(function(err, recipes){
         expect(recipes).to.have.length(2);
         done();
+      });
+    });
+  });
+
+  describe('.destroy', function(){
+    it('should delete a recipe by its id', function(done){
+      var _id = '000000000000000000000001';
+      Recipe.destroy(_id, function(){
+        Recipe.all(function(err, recipes){
+          expect(recipes).to.have.length(1);
+          done();
+        });
       });
     });
   });
