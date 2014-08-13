@@ -1,0 +1,15 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"BBQ Chicken",
+  "photo":"http://www.foodlve.com/pictures/barbecue-chicken-recipe-14271427.jpg",
+  "ingredients":["chicken", "barbecue sauce"],
+  "directions":"1. Prepare, 2. Cook, 3. Clean"
+},
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"Cake",
+  "photo":"http://www.designsnext.com/wp-content/uploads/2014/01/Birthday-cake-designs-5.jpg",
+  "ingredients":["cake mix", "eggs", "water"], 
+  "directions":"1. Prepare, 2. Cook, 3. Clean"
+}
+

@@ -1,0 +1,22 @@
+extends ../shared/template
+block content
+ 
+  #controls
+   #visibility
+      button#hide Hide Form
+      button#show Show Form 
+    form(method='post', action='/recipes')
+      input(name='name', type='text', placeholder='Chicken', autofocus=true)
+      input(name='photo', type='text', placeholder='Image URL')
+      input(name='ingredients', type='text', placeholder='chicken, water, eggs')
+      label Directions
+      textarea(name='directions')
+      button Add Recipe
+
+  #recipes
+    each recipe in recipes
+      include recipe
+
+  footer (c)2014, Logan Richardson
+
+block scripts

@@ -3,10 +3,71 @@
 *{
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body{
-  background-image: url(/img/node.png);
+  background-color: #AAAAAA;
+}
+
+header{
+  margin: 20px;
+}
+
+header h1{
+  font-size: 25px;
+}
+
+.recipe{
+  display: inline-block;
+  width: 250px;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  margin: 20px;
+  background-color: #DDDDDD;
+}
+
+.recipe .photo{
+  height: 300px;
   background-size: cover;
+  border-bottom: 1px solid #111111;
+  margin-bottom: 10px;
+}
+
+.recipe .name{
+  font-size: 20px;
+  color: #001F3F;
+  padding: 5px;
+}
+
+.recipe .directions, .recipe .ingredients{
+  padding: 5px;
+}
+
+.recipe .ingredients li{
+  position: relative;
+  left: 20px;
+}
+
+#controls{
+}
+
+#visibility{
+  margin-left: 20px;
+}
+
+
+form{
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+form input, form button, form textarea{
+  width: 350px;
+  display: block;
+  
 }
 
