@@ -1,10 +1,10 @@
-## name of project
+iron-chef
 ### Code Badges
 build status icon
 coverage status icon
 
 ### About
-write a description about your project
+A cook book application written in NodeJS that can add and update recipes.
 
 ### Models
 ```
@@ -24,9 +24,8 @@ prop-f
 ```
 
 ### Features
-- feature 1
-- feature 2
-- feature 3
+- NodeJS
+
 
 ### Running Tests
 ```bash
@@ -35,7 +34,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Logan Richardson](https://github.com/GLoganDR)
 
 ### License
 [MIT](LICENSE)
